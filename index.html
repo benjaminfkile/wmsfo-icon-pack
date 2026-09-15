@@ -1,0 +1,2389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WMSFO Icon Pack</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Mono&display=swap">
+<style>
+  :root { --ground:#eef3fa; --panel:#fff; --panel-2:#f5f8fd; --line:#d3ddee; --text:#2c3850; --text-bright:#0f1a30; --text-dim:#5a6885; --accent:#0b6bb5; --on-accent:#fff; }
+  :root[data-theme="dark"] { --ground:#070d1c; --panel:#0f182e; --panel-2:#16213c; --line:#243252; --text:#c9d5ec; --text-bright:#eef3ff; --text-dim:#8393b5; --accent:#6fd3ff; --on-accent:#070d1c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--ground); color:var(--text); font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:15px; line-height:1.45; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding-block: 24px 64px; padding-inline: 20px; }
+  header { display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; margin-bottom:8px; }
+  h1 { margin:0; font-size:22px; color:var(--text-bright); }
+  .sub { color:var(--text-dim); margin:0 0 16px; max-width:70ch; }
+  .controls { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  button, select, input[type=search] { font:inherit; padding:7px 12px; border:1px solid var(--line); border-radius:6px; background:var(--panel); color:var(--text); }
+  button[aria-pressed="true"] { border-color:var(--accent); color:var(--accent); }
+  button:focus-visible, select:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap:12px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:10px; }
+  .cell { display:flex; align-items:center; justify-content:center; height:76px; border-radius:8px; background:var(--panel-2); color:var(--accent); position:relative; }
+  .cell .ic { width:48px; height:48px; }
+  .sizes { display:flex; align-items:center; gap:12px; color:var(--accent); padding-inline:4px; }
+  .s16 { width:16px; height:16px; } .s24 { width:24px; height:24px; } .s40 { width:40px; height:40px; }
+  .meta { display:flex; justify-content:space-between; align-items:baseline; gap:8px; }
+  .name { font-weight:600; color:var(--text-bright); }
+  code { font-family:"IBM Plex Mono", ui-monospace, monospace; font-size:12px; color:var(--text-dim); }
+  body[data-color="text"] .cell, body[data-color="text"] .sizes, body[data-color="text"] .ctx { color:var(--text); }
+  body[data-color="black"] .cell, body[data-color="black"] .sizes { color:#000; }
+  h2 { font-size:17px; color:var(--text-bright); margin:32px 0 10px; }
+  .ctx { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:20px; display:grid; gap:18px; color:var(--accent); }
+  .ctx p, .ctx li, .ctx h3 { color:var(--text); margin:0; }
+  .ctx h3 { font-size:20px; color:var(--text-bright); display:flex; align-items:center; gap:10px; }
+  .ctx ul { list-style:none; padding:0; margin:0; display:grid; gap:8px; }
+  .ctx li { display:flex; gap:10px; align-items:center; }
+  .ctx .ic { flex:none; }
+  .btns { display:flex; gap:10px; flex-wrap:wrap; }
+  .btn { display:inline-flex; align-items:center; gap:8px; padding:9px 14px; border:1px solid var(--accent); border-radius:6px; color:var(--accent); font-weight:600; }
+  .row { display:flex; gap:28px; flex-wrap:wrap; justify-content:center; text-align:center; }
+  .row div { display:grid; gap:6px; justify-items:center; font-size:13px; color:var(--text); }
+  .hero { display:grid; justify-items:center; gap:6px; text-align:center; }
+  .hero .ic { width:56px; height:56px; }
+  .inline .ic { width:16px; height:16px; vertical-align:-3px; margin-inline:2px; }
+  .hidden { display:none !important; }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body data-color="accent">
+<div class="wrap">
+  <header>
+    <h1>WMSFO Icon Pack</h1>
+    <div class="controls">
+      <input type="search" id="q" placeholder="filter by name" aria-label="Filter icons">
+      <button id="theme" aria-pressed="false">Dark</button>
+      <select id="color" aria-label="Icon colour"><option value="accent">accent (site)</option><option value="text">text colour</option><option value="black">black (admin img)</option></select>
+    </div>
+  </header>
+  <p class="sub">A 24 grid and a 1.5 stroke on every icon. Each one gets a soft tint plus one or two fixed pops (red, gold, green, snow, cocoa). The stroke and the tint follow the theme accent. Every file is a drop-in for contracts/icons.</p>
+
+  <h2>In context</h2>
+  <div class="ctx">
+    <div class="hero"><svg class="ic " data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+<h3>DEV Playground</h3><p>Watch this space for Santa's next flight.</p></div>
+    <ul>
+      <li><svg class="ic s24" data-id="holly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 Q5 6 5 12 Q10 10 12 14 Q14 10 19 12 Q19 6 12 4 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 4 L12 14" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.4" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="13.6" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="19.8" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<span>The tracker turns into a live map the moment he lifts off</span></li>
+      <li><svg class="ic s24" data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<span>Alerts go out when the night is set and again at liftoff</span></li>
+      <li><svg class="ic s24" data-id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="8" cy="9" r="1.1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="8" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="16" cy="14" r="1.2" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="10" cy="15" r="1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="13" cy="12" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="7" cy="13" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+</svg>
+<span>Cookies open while he is in the air</span></li>
+      <li><svg class="ic s24" data-id="gift" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="10" width="16" height="10" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="7" width="18" height="3.5" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 7 L12 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="2" />
+  <path d="M12 7 Q9 3 7 5 Q6 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 7 Q15 3 17 5 Q18 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<span>Sponsors keep the tank full</span></li>
+    </ul>
+    <div class="btns"><span class="btn"><svg class="ic s24" data-id="compass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 6 L14 12 L10 12 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M12 18 L10 12 L14 12 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="12" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 2.5 L12 4" />
+  <path d="M12 20 L12 21.5" />
+</svg>
+See the route</span><span class="btn"><svg class="ic s24" data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+Get alerts</span><span class="btn"><svg class="ic s24" data-id="envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="6" width="18" height="13" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 8 L12 14 L21 8" />
+  <circle cx="12" cy="14.2" r="1.7" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+Flyover questions</span></div>
+    <div class="row">
+      <div><svg class="ic s40" data-id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="5" width="18" height="16" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 10 L3 6.5 Q3 5 4.5 5 L19.5 5 Q21 5 21 6.5 L21 10 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 3 L8 7" />
+  <path d="M16 3 L16 7" />
+  <path d="M8 14 L10 14" />
+  <path d="M14 14 L16 14" />
+  <path d="M8 17 L10 17" />
+</svg>
+The night gets set</div>
+      <div><svg class="ic s40" data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+You get an alert</div>
+      <div><svg class="ic s40" data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+He lifts off</div>
+      <div><svg class="ic s40" data-id="map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22 Q4 12 4 9 Q4 3 12 3 Q20 3 20 9 Q20 12 12 22 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="9" r="2.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+You watch the map</div>
+      <div><svg class="ic s40" data-id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="8" cy="9" r="1.1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="8" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="16" cy="14" r="1.2" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="10" cy="15" r="1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="13" cy="12" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="7" cy="13" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+</svg>
+You leave a cookie</div>
+    </div>
+    <p class="inline">Inline in text: Santa <svg class="ic " data-id="santa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 Q12 2 18 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke-opacity="0.35" />
+  <circle cx="12" cy="2.7" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M7 13.5 Q12 22 17 13.5 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="10" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.6" r="1" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+ waves from the helicopter <svg class="ic " data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+ while the tree <svg class="ic " data-id="tree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L7 10 L9.5 10 L6 15 L9 15 L4.5 20 L19.5 20 L15 15 L18 15 L14.5 10 L17 10 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M10.5 20 L10.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M13.5 20 L13.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 0.8 L12.9 2.8 L15 3 L13.4 4.3 L13.9 6.3 L12 5.2 L10.1 6.3 L10.6 4.3 L9 3 L11.1 2.8 Z" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="10" cy="13" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="14" cy="17" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="13" cy="9.5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="8.5" cy="18" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+ and the star <svg class="ic " data-id="north-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12.7 11.3 L18 12 L12.7 12.7 L12 18 L11.3 12.7 L6 12 L11.3 11.3 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.6" stroke="none" />
+  <circle cx="19" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="19" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+ light the valley. Leave a cookie <svg class="ic " data-id="cookie-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 6 L13.6 10.2 L18 10.5 L14.7 13.5 L15.7 17.8 L12 15.4 L8.3 17.8 L9.3 13.5 L6 10.5 L10.4 10.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+</svg>
+ and a mug <svg class="ic " data-id="mug" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 9 L4 18 Q4 20 6 20 L14 20 Q16 20 16 18 L16 9 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4 9 L16 9 L16 11.5 L4 11.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" stroke="none" />
+  <circle cx="8.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <circle cx="11.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <path d="M16 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L16 17" />
+  <path d="M7 6 Q7 4 8 3" />
+  <path d="M10 6 Q10 4 11 3" />
+  <path d="M13 6 Q13 4 14 3" />
+</svg>
+ of cocoa.</p>
+  </div>
+
+  <h2>All 60</h2>
+  <div class="grid" id="grid">
+    <div class="card" id="i-angel">
+      <div class="cell"><svg class="ic " data-id="angel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L12 11 L16 21 Z" fill="currentColor" fill-opacity="0.22" />
+  <path d="M8 13 Q3 12 3 8 Q6 9 9 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <path d="M16 13 Q21 12 21 8 Q18 9 15 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="8" r="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <ellipse cx="12" cy="4" rx="2.6" ry="1" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="angel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L12 11 L16 21 Z" fill="currentColor" fill-opacity="0.22" />
+  <path d="M8 13 Q3 12 3 8 Q6 9 9 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <path d="M16 13 Q21 12 21 8 Q18 9 15 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="8" r="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <ellipse cx="12" cy="4" rx="2.6" ry="1" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s24" data-id="angel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L12 11 L16 21 Z" fill="currentColor" fill-opacity="0.22" />
+  <path d="M8 13 Q3 12 3 8 Q6 9 9 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <path d="M16 13 Q21 12 21 8 Q18 9 15 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="8" r="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <ellipse cx="12" cy="4" rx="2.6" ry="1" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s40" data-id="angel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L12 11 L16 21 Z" fill="currentColor" fill-opacity="0.22" />
+  <path d="M8 13 Q3 12 3 8 Q6 9 9 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <path d="M16 13 Q21 12 21 8 Q18 9 15 11 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="8" r="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <ellipse cx="12" cy="4" rx="2.6" ry="1" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Angel</span><code>angel</code></div>
+    </div>
+    <div class="card" id="i-bauble">
+      <div class="cell"><svg class="ic " data-id="bauble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-red, #e0524b)" />
+  <path d="M6.6 12.4 Q12 9.5 17.4 12.4" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M7.2 16.6 Q12 14 16.8 16.6" stroke="var(--icon-snow, #ffffff)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="bauble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-red, #e0524b)" />
+  <path d="M6.6 12.4 Q12 9.5 17.4 12.4" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M7.2 16.6 Q12 14 16.8 16.6" stroke="var(--icon-snow, #ffffff)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+</svg>
+<svg class="ic s24" data-id="bauble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-red, #e0524b)" />
+  <path d="M6.6 12.4 Q12 9.5 17.4 12.4" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M7.2 16.6 Q12 14 16.8 16.6" stroke="var(--icon-snow, #ffffff)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+</svg>
+<svg class="ic s40" data-id="bauble" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-red, #e0524b)" />
+  <path d="M6.6 12.4 Q12 9.5 17.4 12.4" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M7.2 16.6 Q12 14 16.8 16.6" stroke="var(--icon-snow, #ffffff)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Bauble</span><code>bauble</code></div>
+    </div>
+    <div class="card" id="i-beanie">
+      <div class="cell"><svg class="ic " data-id="beanie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 15 Q4 6 12 6 Q20 6 20 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="15" width="18" height="3.5" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="5" r="1.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="beanie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 15 Q4 6 12 6 Q20 6 20 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="15" width="18" height="3.5" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="5" r="1.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+<svg class="ic s24" data-id="beanie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 15 Q4 6 12 6 Q20 6 20 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="15" width="18" height="3.5" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="5" r="1.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+<svg class="ic s40" data-id="beanie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 15 Q4 6 12 6 Q20 6 20 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="15" width="18" height="3.5" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="5" r="1.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Beanie</span><code>beanie</code></div>
+    </div>
+    <div class="card" id="i-bell">
+      <div class="cell"><svg class="ic " data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 17 Q6 9 12 9 Q18 9 18 17 Z" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M5 17 L19 17" />
+  <path d="M10 20 Q12 22 14 20" />
+  <path d="M12 6 L12 9" />
+  <circle cx="12" cy="5" r="1.4" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Bell</span><code>bell</code></div>
+    </div>
+    <div class="card" id="i-bow">
+      <div class="cell"><svg class="ic " data-id="bow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 12 Q3 6 3 12 Q3 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 12 Q21 6 21 12 Q21 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 13 Q9 20 6 21" stroke="var(--icon-red, #e0524b)" />
+  <path d="M14 13 Q15 20 18 21" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="12" r="1.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="bow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 12 Q3 6 3 12 Q3 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 12 Q21 6 21 12 Q21 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 13 Q9 20 6 21" stroke="var(--icon-red, #e0524b)" />
+  <path d="M14 13 Q15 20 18 21" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="12" r="1.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s24" data-id="bow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 12 Q3 6 3 12 Q3 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 12 Q21 6 21 12 Q21 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 13 Q9 20 6 21" stroke="var(--icon-red, #e0524b)" />
+  <path d="M14 13 Q15 20 18 21" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="12" r="1.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s40" data-id="bow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 12 Q3 6 3 12 Q3 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 12 Q21 6 21 12 Q21 18 12 12 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 13 Q9 20 6 21" stroke="var(--icon-red, #e0524b)" />
+  <path d="M14 13 Q15 20 18 21" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="12" r="1.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Bow</span><code>bow</code></div>
+    </div>
+    <div class="card" id="i-calendar">
+      <div class="cell"><svg class="ic " data-id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="5" width="18" height="16" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 10 L3 6.5 Q3 5 4.5 5 L19.5 5 Q21 5 21 6.5 L21 10 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 3 L8 7" />
+  <path d="M16 3 L16 7" />
+  <path d="M8 14 L10 14" />
+  <path d="M14 14 L16 14" />
+  <path d="M8 17 L10 17" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="5" width="18" height="16" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 10 L3 6.5 Q3 5 4.5 5 L19.5 5 Q21 5 21 6.5 L21 10 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 3 L8 7" />
+  <path d="M16 3 L16 7" />
+  <path d="M8 14 L10 14" />
+  <path d="M14 14 L16 14" />
+  <path d="M8 17 L10 17" />
+</svg>
+<svg class="ic s24" data-id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="5" width="18" height="16" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 10 L3 6.5 Q3 5 4.5 5 L19.5 5 Q21 5 21 6.5 L21 10 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 3 L8 7" />
+  <path d="M16 3 L16 7" />
+  <path d="M8 14 L10 14" />
+  <path d="M14 14 L16 14" />
+  <path d="M8 17 L10 17" />
+</svg>
+<svg class="ic s40" data-id="calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="5" width="18" height="16" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 10 L3 6.5 Q3 5 4.5 5 L19.5 5 Q21 5 21 6.5 L21 10 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 3 L8 7" />
+  <path d="M16 3 L16 7" />
+  <path d="M8 14 L10 14" />
+  <path d="M14 14 L16 14" />
+  <path d="M8 17 L10 17" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Calendar</span><code>calendar</code></div>
+    </div>
+    <div class="card" id="i-candy-cane">
+      <div class="cell"><svg class="ic " data-id="candy-cane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke-opacity="0.35" />
+  <path d="M9.2 7.4 L11.4 5.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 11.2 L11 8.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 14.6 L11 11.6" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 18 L11 15" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15.2 5.6 L17 8" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="candy-cane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke-opacity="0.35" />
+  <path d="M9.2 7.4 L11.4 5.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 11.2 L11 8.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 14.6 L11 11.6" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 18 L11 15" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15.2 5.6 L17 8" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="candy-cane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke-opacity="0.35" />
+  <path d="M9.2 7.4 L11.4 5.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 11.2 L11 8.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 14.6 L11 11.6" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 18 L11 15" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15.2 5.6 L17 8" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="candy-cane" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M8 21 L8 9 Q8 4 12.5 4 Q17 4 17 9" stroke-width="4.2" stroke-opacity="0.35" />
+  <path d="M9.2 7.4 L11.4 5.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 11.2 L11 8.2" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 14.6 L11 11.6" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M8 18 L11 15" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15.2 5.6 L17 8" stroke-width="2.2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Candy cane</span><code>candy-cane</code></div>
+    </div>
+    <div class="card" id="i-cloud">
+      <div class="cell"><svg class="ic " data-id="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 18 Q2 18 2 14 Q2 10 6 10 Q7 6 11 6 Q15 6 16 10 Q21 10 21 14 Q21 18 17 18 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 18 Q2 18 2 14 Q2 10 6 10 Q7 6 11 6 Q15 6 16 10 Q21 10 21 14 Q21 18 17 18 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+<svg class="ic s24" data-id="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 18 Q2 18 2 14 Q2 10 6 10 Q7 6 11 6 Q15 6 16 10 Q21 10 21 14 Q21 18 17 18 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+<svg class="ic s40" data-id="cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 18 Q2 18 2 14 Q2 10 6 10 Q7 6 11 6 Q15 6 16 10 Q21 10 21 14 Q21 18 17 18 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Cloud</span><code>cloud</code></div>
+    </div>
+    <div class="card" id="i-compass">
+      <div class="cell"><svg class="ic " data-id="compass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 6 L14 12 L10 12 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M12 18 L10 12 L14 12 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="12" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 2.5 L12 4" />
+  <path d="M12 20 L12 21.5" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="compass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 6 L14 12 L10 12 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M12 18 L10 12 L14 12 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="12" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 2.5 L12 4" />
+  <path d="M12 20 L12 21.5" />
+</svg>
+<svg class="ic s24" data-id="compass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 6 L14 12 L10 12 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M12 18 L10 12 L14 12 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="12" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 2.5 L12 4" />
+  <path d="M12 20 L12 21.5" />
+</svg>
+<svg class="ic s40" data-id="compass" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 6 L14 12 L10 12 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M12 18 L10 12 L14 12 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="12" cy="12" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 2.5 L12 4" />
+  <path d="M12 20 L12 21.5" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Compass</span><code>compass</code></div>
+    </div>
+    <div class="card" id="i-cookie">
+      <div class="cell"><svg class="ic " data-id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="8" cy="9" r="1.1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="8" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="16" cy="14" r="1.2" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="10" cy="15" r="1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="13" cy="12" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="7" cy="13" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="8" cy="9" r="1.1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="8" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="16" cy="14" r="1.2" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="10" cy="15" r="1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="13" cy="12" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="7" cy="13" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="8" cy="9" r="1.1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="8" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="16" cy="14" r="1.2" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="10" cy="15" r="1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="13" cy="12" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="7" cy="13" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="8" cy="9" r="1.1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="8" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="16" cy="14" r="1.2" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="10" cy="15" r="1" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="13" cy="12" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="7" cy="13" r="0.8" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Cookie</span><code>cookie</code></div>
+    </div>
+    <div class="card" id="i-cookie-smile">
+      <div class="cell"><svg class="ic " data-id="cookie-smile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="9" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <path d="M8 14 Q12 18 16 14" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="cookie-smile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="9" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <path d="M8 14 Q12 18 16 14" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+<svg class="ic s24" data-id="cookie-smile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="9" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <path d="M8 14 Q12 18 16 14" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+<svg class="ic s40" data-id="cookie-smile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <circle cx="9" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <circle cx="15" cy="10" r="0.9" fill="var(--icon-cocoa, #9a5b2f)" stroke="none" />
+  <path d="M8 14 Q12 18 16 14" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Smiley cookie</span><code>cookie-smile</code></div>
+    </div>
+    <div class="card" id="i-cookie-star">
+      <div class="cell"><svg class="ic " data-id="cookie-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 6 L13.6 10.2 L18 10.5 L14.7 13.5 L15.7 17.8 L12 15.4 L8.3 17.8 L9.3 13.5 L6 10.5 L10.4 10.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="cookie-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 6 L13.6 10.2 L18 10.5 L14.7 13.5 L15.7 17.8 L12 15.4 L8.3 17.8 L9.3 13.5 L6 10.5 L10.4 10.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+</svg>
+<svg class="ic s24" data-id="cookie-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 6 L13.6 10.2 L18 10.5 L14.7 13.5 L15.7 17.8 L12 15.4 L8.3 17.8 L9.3 13.5 L6 10.5 L10.4 10.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+</svg>
+<svg class="ic s40" data-id="cookie-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 6 L13.6 10.2 L18 10.5 L14.7 13.5 L15.7 17.8 L12 15.4 L8.3 17.8 L9.3 13.5 L6 10.5 L10.4 10.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Star cookie</span><code>cookie-star</code></div>
+    </div>
+    <div class="card" id="i-cookie-swirl">
+      <div class="cell"><svg class="ic " data-id="cookie-swirl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 4 Q4 12 12 20 Q20 12 12 4" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 8 Q9 12 12 16 Q15 12 12 8" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="cookie-swirl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 4 Q4 12 12 20 Q20 12 12 4" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 8 Q9 12 12 16 Q15 12 12 8" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+<svg class="ic s24" data-id="cookie-swirl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 4 Q4 12 12 20 Q20 12 12 4" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 8 Q9 12 12 16 Q15 12 12 8" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+<svg class="ic s40" data-id="cookie-swirl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-gold, #f0b32e)" fill-opacity="0.85" />
+  <path d="M12 4 Q4 12 12 20 Q20 12 12 4" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 8 Q9 12 12 16 Q15 12 12 8" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Swirl cookie</span><code>cookie-swirl</code></div>
+    </div>
+    <div class="card" id="i-drum">
+      <div class="cell"><svg class="ic " data-id="drum" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 8 L3 16 Q3 18.5 12 18.5 Q21 18.5 21 16 L21 8 Z" fill="var(--icon-red, #e0524b)" />
+  <ellipse cx="12" cy="8" rx="9" ry="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M5 10 L8 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 10 L5 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M11 10.5 L14 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M14 10.5 L11 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M17 10 L20 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M20 10 L17 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M6 20.5 L10 22.5" />
+  <path d="M18 20.5 L14 22.5" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="drum" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 8 L3 16 Q3 18.5 12 18.5 Q21 18.5 21 16 L21 8 Z" fill="var(--icon-red, #e0524b)" />
+  <ellipse cx="12" cy="8" rx="9" ry="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M5 10 L8 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 10 L5 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M11 10.5 L14 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M14 10.5 L11 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M17 10 L20 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M20 10 L17 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M6 20.5 L10 22.5" />
+  <path d="M18 20.5 L14 22.5" />
+</svg>
+<svg class="ic s24" data-id="drum" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 8 L3 16 Q3 18.5 12 18.5 Q21 18.5 21 16 L21 8 Z" fill="var(--icon-red, #e0524b)" />
+  <ellipse cx="12" cy="8" rx="9" ry="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M5 10 L8 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 10 L5 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M11 10.5 L14 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M14 10.5 L11 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M17 10 L20 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M20 10 L17 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M6 20.5 L10 22.5" />
+  <path d="M18 20.5 L14 22.5" />
+</svg>
+<svg class="ic s40" data-id="drum" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 8 L3 16 Q3 18.5 12 18.5 Q21 18.5 21 16 L21 8 Z" fill="var(--icon-red, #e0524b)" />
+  <ellipse cx="12" cy="8" rx="9" ry="2.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M5 10 L8 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 10 L5 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M11 10.5 L14 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M14 10.5 L11 17" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M17 10 L20 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M20 10 L17 16.5" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M6 20.5 L10 22.5" />
+  <path d="M18 20.5 L14 22.5" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Drum</span><code>drum</code></div>
+    </div>
+    <div class="card" id="i-earmuffs">
+      <div class="cell"><svg class="ic " data-id="earmuffs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 15 Q5 4 12 4 Q19 4 19 15" />
+  <circle cx="5" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+  <circle cx="19" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="earmuffs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 15 Q5 4 12 4 Q19 4 19 15" />
+  <circle cx="5" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+  <circle cx="19" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="earmuffs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 15 Q5 4 12 4 Q19 4 19 15" />
+  <circle cx="5" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+  <circle cx="19" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="earmuffs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 15 Q5 4 12 4 Q19 4 19 15" />
+  <circle cx="5" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+  <circle cx="19" cy="16" r="3.2" fill="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Earmuffs</span><code>earmuffs</code></div>
+    </div>
+    <div class="card" id="i-envelope">
+      <div class="cell"><svg class="ic " data-id="envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="6" width="18" height="13" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 8 L12 14 L21 8" />
+  <circle cx="12" cy="14.2" r="1.7" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="6" width="18" height="13" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 8 L12 14 L21 8" />
+  <circle cx="12" cy="14.2" r="1.7" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="6" width="18" height="13" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 8 L12 14 L21 8" />
+  <circle cx="12" cy="14.2" r="1.7" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="envelope" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="6" width="18" height="13" rx="1.5" fill="currentColor" fill-opacity="0.18" />
+  <path d="M3 8 L12 14 L21 8" />
+  <circle cx="12" cy="14.2" r="1.7" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Envelope</span><code>envelope</code></div>
+    </div>
+    <div class="card" id="i-facebook">
+      <div class="cell"><svg class="ic " data-id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor" fill-opacity="0.18" />
+  <path d="M15 8 L13 8 Q11 8 11 10 L11 12 L9 12 L9 14 L11 14 L11 21" />
+  <path d="M11 14 L14 14" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor" fill-opacity="0.18" />
+  <path d="M15 8 L13 8 Q11 8 11 10 L11 12 L9 12 L9 14 L11 14 L11 21" />
+  <path d="M11 14 L14 14" />
+</svg>
+<svg class="ic s24" data-id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor" fill-opacity="0.18" />
+  <path d="M15 8 L13 8 Q11 8 11 10 L11 12 L9 12 L9 14 L11 14 L11 21" />
+  <path d="M11 14 L14 14" />
+</svg>
+<svg class="ic s40" data-id="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="3" fill="currentColor" fill-opacity="0.18" />
+  <path d="M15 8 L13 8 Q11 8 11 10 L11 12 L9 12 L9 14 L11 14 L11 21" />
+  <path d="M11 14 L14 14" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Facebook</span><code>facebook</code></div>
+    </div>
+    <div class="card" id="i-fireplace">
+      <div class="cell"><svg class="ic " data-id="fireplace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="4" width="18" height="16" rx="0.5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.55" />
+  <path d="M6 20 L6 12 L18 12 L18 20 Z" fill="currentColor" fill-opacity="0.3" />
+  <path d="M3 8 L21 8" />
+  <path d="M12 19.5 Q8.5 17 11 13.5 Q12 15.5 14 13.5 Q15.5 17 12 19.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 18.5 Q11 17 12 15.5 Q13 17 12 18.5 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="fireplace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="4" width="18" height="16" rx="0.5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.55" />
+  <path d="M6 20 L6 12 L18 12 L18 20 Z" fill="currentColor" fill-opacity="0.3" />
+  <path d="M3 8 L21 8" />
+  <path d="M12 19.5 Q8.5 17 11 13.5 Q12 15.5 14 13.5 Q15.5 17 12 19.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 18.5 Q11 17 12 15.5 Q13 17 12 18.5 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="fireplace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="4" width="18" height="16" rx="0.5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.55" />
+  <path d="M6 20 L6 12 L18 12 L18 20 Z" fill="currentColor" fill-opacity="0.3" />
+  <path d="M3 8 L21 8" />
+  <path d="M12 19.5 Q8.5 17 11 13.5 Q12 15.5 14 13.5 Q15.5 17 12 19.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 18.5 Q11 17 12 15.5 Q13 17 12 18.5 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="fireplace" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="4" width="18" height="16" rx="0.5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.55" />
+  <path d="M6 20 L6 12 L18 12 L18 20 Z" fill="currentColor" fill-opacity="0.3" />
+  <path d="M3 8 L21 8" />
+  <path d="M12 19.5 Q8.5 17 11 13.5 Q12 15.5 14 13.5 Q15.5 17 12 19.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 18.5 Q11 17 12 15.5 Q13 17 12 18.5 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Fireplace</span><code>fireplace</code></div>
+    </div>
+    <div class="card" id="i-gift">
+      <div class="cell"><svg class="ic " data-id="gift" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="10" width="16" height="10" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="7" width="18" height="3.5" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 7 L12 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="2" />
+  <path d="M12 7 Q9 3 7 5 Q6 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 7 Q15 3 17 5 Q18 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="gift" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="10" width="16" height="10" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="7" width="18" height="3.5" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 7 L12 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="2" />
+  <path d="M12 7 Q9 3 7 5 Q6 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 7 Q15 3 17 5 Q18 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s24" data-id="gift" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="10" width="16" height="10" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="7" width="18" height="3.5" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 7 L12 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="2" />
+  <path d="M12 7 Q9 3 7 5 Q6 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 7 Q15 3 17 5 Q18 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s40" data-id="gift" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="4" y="10" width="16" height="10" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <rect x="3" y="7" width="18" height="3.5" rx="0.8" fill="var(--icon-red, #e0524b)" />
+  <path d="M12 7 L12 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="2" />
+  <path d="M12 7 Q9 3 7 5 Q6 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 7 Q15 3 17 5 Q18 7 12 7 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Gift</span><code>gift</code></div>
+    </div>
+    <div class="card" id="i-gift-tag">
+      <div class="cell"><svg class="ic " data-id="gift-tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 13 L11 4 L20 4 L20 13 L11 22 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="16" cy="8" r="1.3" fill="currentColor" fill-opacity="0.4" />
+  <path d="M8 14 L13 19" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M16 8 Q19 4 21 2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="gift-tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 13 L11 4 L20 4 L20 13 L11 22 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="16" cy="8" r="1.3" fill="currentColor" fill-opacity="0.4" />
+  <path d="M8 14 L13 19" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M16 8 Q19 4 21 2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="gift-tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 13 L11 4 L20 4 L20 13 L11 22 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="16" cy="8" r="1.3" fill="currentColor" fill-opacity="0.4" />
+  <path d="M8 14 L13 19" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M16 8 Q19 4 21 2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="gift-tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 13 L11 4 L20 4 L20 13 L11 22 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" />
+  <circle cx="16" cy="8" r="1.3" fill="currentColor" fill-opacity="0.4" />
+  <path d="M8 14 L13 19" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M16 8 Q19 4 21 2" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Gift tag</span><code>gift-tag</code></div>
+    </div>
+    <div class="card" id="i-gingerbread">
+      <div class="cell"><svg class="ic " data-id="gingerbread" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 9 L4 12 L4 15 L9 13 L8 20 L11 20 L12 17 L13 20 L16 20 L15 13 L20 15 L20 12 L15 9 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="12" cy="6" r="3" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="11" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="13" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <path d="M10.5 7.3 Q12 8.5 13.5 7.3" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <circle cx="12" cy="12" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="15" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M5 13.5 L8.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <path d="M19 13.5 L15.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="gingerbread" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 9 L4 12 L4 15 L9 13 L8 20 L11 20 L12 17 L13 20 L16 20 L15 13 L20 15 L20 12 L15 9 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="12" cy="6" r="3" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="11" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="13" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <path d="M10.5 7.3 Q12 8.5 13.5 7.3" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <circle cx="12" cy="12" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="15" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M5 13.5 L8.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <path d="M19 13.5 L15.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+</svg>
+<svg class="ic s24" data-id="gingerbread" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 9 L4 12 L4 15 L9 13 L8 20 L11 20 L12 17 L13 20 L16 20 L15 13 L20 15 L20 12 L15 9 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="12" cy="6" r="3" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="11" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="13" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <path d="M10.5 7.3 Q12 8.5 13.5 7.3" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <circle cx="12" cy="12" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="15" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M5 13.5 L8.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <path d="M19 13.5 L15.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+</svg>
+<svg class="ic s40" data-id="gingerbread" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 9 L4 12 L4 15 L9 13 L8 20 L11 20 L12 17 L13 20 L16 20 L15 13 L20 15 L20 12 L15 9 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="12" cy="6" r="3" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" />
+  <circle cx="11" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="13" cy="5.6" r="0.55" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <path d="M10.5 7.3 Q12 8.5 13.5 7.3" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <circle cx="12" cy="12" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="15" r="0.7" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M5 13.5 L8.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+  <path d="M19 13.5 L15.5 12" stroke="var(--icon-snow, #ffffff)" stroke-width="1" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Gingerbread person</span><code>gingerbread</code></div>
+    </div>
+    <div class="card" id="i-globe">
+      <div class="cell"><svg class="ic " data-id="globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M3 12 L21 12" />
+  <path d="M12 3 Q7 7 7 12 Q7 17 12 21" />
+  <path d="M12 3 Q17 7 17 12 Q17 17 12 21" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M3 12 L21 12" />
+  <path d="M12 3 Q7 7 7 12 Q7 17 12 21" />
+  <path d="M12 3 Q17 7 17 12 Q17 17 12 21" />
+</svg>
+<svg class="ic s24" data-id="globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M3 12 L21 12" />
+  <path d="M12 3 Q7 7 7 12 Q7 17 12 21" />
+  <path d="M12 3 Q17 7 17 12 Q17 17 12 21" />
+</svg>
+<svg class="ic s40" data-id="globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="currentColor" fill-opacity="0.14" />
+  <path d="M3 12 L21 12" />
+  <path d="M12 3 Q7 7 7 12 Q7 17 12 21" />
+  <path d="M12 3 Q17 7 17 12 Q17 17 12 21" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Globe</span><code>globe</code></div>
+    </div>
+    <div class="card" id="i-heart">
+      <div class="cell"><svg class="ic " data-id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20 Q3 13 3 8 Q3 4 7 4 Q10 4 12 7 Q14 4 17 4 Q21 4 21 8 Q21 13 12 20 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M6 7.5 Q6.5 6 8 6" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20 Q3 13 3 8 Q3 4 7 4 Q10 4 12 7 Q14 4 17 4 Q21 4 21 8 Q21 13 12 20 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M6 7.5 Q6.5 6 8 6" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+</svg>
+<svg class="ic s24" data-id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20 Q3 13 3 8 Q3 4 7 4 Q10 4 12 7 Q14 4 17 4 Q21 4 21 8 Q21 13 12 20 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M6 7.5 Q6.5 6 8 6" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+</svg>
+<svg class="ic s40" data-id="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 20 Q3 13 3 8 Q3 4 7 4 Q10 4 12 7 Q14 4 17 4 Q21 4 21 8 Q21 13 12 20 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M6 7.5 Q6.5 6 8 6" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Heart</span><code>heart</code></div>
+    </div>
+    <div class="card" id="i-helicopter">
+      <div class="cell"><svg class="ic " data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+<svg class="ic s24" data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+<svg class="ic s40" data-id="helicopter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L10 17 Q8 17 7 16 L4 13 Q3 12 4 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M14.5 11 L18 11 Q20 11 20 13 L20 14.2 L14.5 14.2 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+  <path d="M8 17 L8 20" />
+  <path d="M15 17 L15 20" />
+  <path d="M6 20 L17 20" />
+  <path d="M18 11 L22 4" />
+  <path d="M21 3 L23 5" />
+  <path d="M2 8 L22 8" stroke-width="1.8" />
+  <path d="M12 8 L12 11" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Helicopter</span><code>helicopter</code></div>
+    </div>
+    <div class="card" id="i-holly">
+      <div class="cell"><svg class="ic " data-id="holly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 Q5 6 5 12 Q10 10 12 14 Q14 10 19 12 Q19 6 12 4 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 4 L12 14" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.4" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="13.6" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="19.8" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="holly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 Q5 6 5 12 Q10 10 12 14 Q14 10 19 12 Q19 6 12 4 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 4 L12 14" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.4" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="13.6" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="19.8" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="holly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 Q5 6 5 12 Q10 10 12 14 Q14 10 19 12 Q19 6 12 4 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 4 L12 14" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.4" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="13.6" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="19.8" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="holly" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 Q5 6 5 12 Q10 10 12 14 Q14 10 19 12 Q19 6 12 4 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 4 L12 14" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.4" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="13.6" cy="17" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="19.8" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Holly</span><code>holly</code></div>
+    </div>
+    <div class="card" id="i-instagram">
+      <div class="cell"><svg class="ic " data-id="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="4.5" fill="currentColor" fill-opacity="0.18" />
+  <circle cx="12" cy="12" r="4" />
+  <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="4.5" fill="currentColor" fill-opacity="0.18" />
+  <circle cx="12" cy="12" r="4" />
+  <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="4.5" fill="currentColor" fill-opacity="0.18" />
+  <circle cx="12" cy="12" r="4" />
+  <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="3" y="3" width="18" height="18" rx="4.5" fill="currentColor" fill-opacity="0.18" />
+  <circle cx="12" cy="12" r="4" />
+  <circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Instagram</span><code>instagram</code></div>
+    </div>
+    <div class="card" id="i-jingle-bells">
+      <div class="cell"><svg class="ic " data-id="jingle-bells" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 5 L21 5" stroke="var(--icon-red, #e0524b)" stroke-width="2" />
+  <path d="M3 5 Q4 8 6 8 Q8 8 9 5" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15 5 Q16 8 18 8 Q20 8 21 5" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="6.5" cy="12.5" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M4.5 12.5 L8.5 12.5" />
+  <circle cx="17.5" cy="16" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M15.5 16 L19.5 16" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="jingle-bells" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 5 L21 5" stroke="var(--icon-red, #e0524b)" stroke-width="2" />
+  <path d="M3 5 Q4 8 6 8 Q8 8 9 5" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15 5 Q16 8 18 8 Q20 8 21 5" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="6.5" cy="12.5" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M4.5 12.5 L8.5 12.5" />
+  <circle cx="17.5" cy="16" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M15.5 16 L19.5 16" />
+</svg>
+<svg class="ic s24" data-id="jingle-bells" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 5 L21 5" stroke="var(--icon-red, #e0524b)" stroke-width="2" />
+  <path d="M3 5 Q4 8 6 8 Q8 8 9 5" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15 5 Q16 8 18 8 Q20 8 21 5" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="6.5" cy="12.5" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M4.5 12.5 L8.5 12.5" />
+  <circle cx="17.5" cy="16" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M15.5 16 L19.5 16" />
+</svg>
+<svg class="ic s40" data-id="jingle-bells" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 5 L21 5" stroke="var(--icon-red, #e0524b)" stroke-width="2" />
+  <path d="M3 5 Q4 8 6 8 Q8 8 9 5" stroke="var(--icon-red, #e0524b)" />
+  <path d="M15 5 Q16 8 18 8 Q20 8 21 5" stroke="var(--icon-red, #e0524b)" />
+  <circle cx="6.5" cy="12.5" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M4.5 12.5 L8.5 12.5" />
+  <circle cx="17.5" cy="16" r="4" fill="var(--icon-gold, #f0b32e)" />
+  <path d="M15.5 16 L19.5 16" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Jingle bells</span><code>jingle-bells</code></div>
+    </div>
+    <div class="card" id="i-lollipop">
+      <div class="cell"><svg class="ic " data-id="lollipop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="10" cy="9" r="6.5" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 9 Q9 5 12 5 Q14 5 14 8 Q14 10 11 10 Q7 10 7 7" stroke="var(--icon-snow, #ffffff)" stroke-width="1.3" />
+  <path d="M14.5 13.5 L21 20" stroke-width="1.8" />
+  <path d="M19 22 L22 19" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="lollipop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="10" cy="9" r="6.5" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 9 Q9 5 12 5 Q14 5 14 8 Q14 10 11 10 Q7 10 7 7" stroke="var(--icon-snow, #ffffff)" stroke-width="1.3" />
+  <path d="M14.5 13.5 L21 20" stroke-width="1.8" />
+  <path d="M19 22 L22 19" />
+</svg>
+<svg class="ic s24" data-id="lollipop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="10" cy="9" r="6.5" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 9 Q9 5 12 5 Q14 5 14 8 Q14 10 11 10 Q7 10 7 7" stroke="var(--icon-snow, #ffffff)" stroke-width="1.3" />
+  <path d="M14.5 13.5 L21 20" stroke-width="1.8" />
+  <path d="M19 22 L22 19" />
+</svg>
+<svg class="ic s40" data-id="lollipop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="10" cy="9" r="6.5" fill="var(--icon-red, #e0524b)" />
+  <path d="M10 9 Q9 5 12 5 Q14 5 14 8 Q14 10 11 10 Q7 10 7 7" stroke="var(--icon-snow, #ffffff)" stroke-width="1.3" />
+  <path d="M14.5 13.5 L21 20" stroke-width="1.8" />
+  <path d="M19 22 L22 19" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Lollipop</span><code>lollipop</code></div>
+    </div>
+    <div class="card" id="i-map-pin">
+      <div class="cell"><svg class="ic " data-id="map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22 Q4 12 4 9 Q4 3 12 3 Q20 3 20 9 Q20 12 12 22 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="9" r="2.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22 Q4 12 4 9 Q4 3 12 3 Q20 3 20 9 Q20 12 12 22 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="9" r="2.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+<svg class="ic s24" data-id="map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22 Q4 12 4 9 Q4 3 12 3 Q20 3 20 9 Q20 12 12 22 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="9" r="2.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+<svg class="ic s40" data-id="map-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 22 Q4 12 4 9 Q4 3 12 3 Q20 3 20 9 Q20 12 12 22 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="12" cy="9" r="2.6" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Map pin</span><code>map-pin</code></div>
+    </div>
+    <div class="card" id="i-mistletoe">
+      <div class="cell"><svg class="ic " data-id="mistletoe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 L12 11" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q4 9 4 16 Q10 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q20 9 20 16 Q14 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.2" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="13.8" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="12" cy="20.6" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M9.5 4 L14.5 4" stroke="var(--icon-red, #e0524b)" stroke-width="2.2" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="mistletoe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 L12 11" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q4 9 4 16 Q10 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q20 9 20 16 Q14 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.2" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="13.8" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="12" cy="20.6" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M9.5 4 L14.5 4" stroke="var(--icon-red, #e0524b)" stroke-width="2.2" />
+</svg>
+<svg class="ic s24" data-id="mistletoe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 L12 11" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q4 9 4 16 Q10 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q20 9 20 16 Q14 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.2" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="13.8" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="12" cy="20.6" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M9.5 4 L14.5 4" stroke="var(--icon-red, #e0524b)" stroke-width="2.2" />
+</svg>
+<svg class="ic s40" data-id="mistletoe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 4 L12 11" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q4 9 4 16 Q10 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 11 Q20 9 20 16 Q14 17 12 11 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="10.2" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="13.8" cy="18" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <circle cx="12" cy="20.6" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M9.5 4 L14.5 4" stroke="var(--icon-red, #e0524b)" stroke-width="2.2" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Mistletoe</span><code>mistletoe</code></div>
+    </div>
+    <div class="card" id="i-mitten">
+      <div class="cell"><svg class="ic " data-id="mitten" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 20 L8 8 Q8 4 12 4 Q17 4 17 9 L17 14 L14 14 Q14 17 17 18 L17 20 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="7.3" y="17" width="10.4" height="3.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="9.5" r="1.2" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="mitten" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 20 L8 8 Q8 4 12 4 Q17 4 17 9 L17 14 L14 14 Q14 17 17 18 L17 20 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="7.3" y="17" width="10.4" height="3.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="9.5" r="1.2" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="mitten" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 20 L8 8 Q8 4 12 4 Q17 4 17 9 L17 14 L14 14 Q14 17 17 18 L17 20 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="7.3" y="17" width="10.4" height="3.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="9.5" r="1.2" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="mitten" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 20 L8 8 Q8 4 12 4 Q17 4 17 9 L17 14 L14 14 Q14 17 17 18 L17 20 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="7.3" y="17" width="10.4" height="3.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="9.5" r="1.2" fill="var(--icon-snow, #ffffff)" fill-opacity="0.9" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Mitten</span><code>mitten</code></div>
+    </div>
+    <div class="card" id="i-moon">
+      <div class="cell"><svg class="ic " data-id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 15 Q13 17 9 12 Q7 8 10 3 Q4 5 4 12 Q4 20 12 20 Q17 20 20 15 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <circle cx="18" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="21" cy="9" r="0.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 15 Q13 17 9 12 Q7 8 10 3 Q4 5 4 12 Q4 20 12 20 Q17 20 20 15 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <circle cx="18" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="21" cy="9" r="0.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 15 Q13 17 9 12 Q7 8 10 3 Q4 5 4 12 Q4 20 12 20 Q17 20 20 15 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <circle cx="18" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="21" cy="9" r="0.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 15 Q13 17 9 12 Q7 8 10 3 Q4 5 4 12 Q4 20 12 20 Q17 20 20 15 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <circle cx="18" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="21" cy="9" r="0.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Moon</span><code>moon</code></div>
+    </div>
+    <div class="card" id="i-mug">
+      <div class="cell"><svg class="ic " data-id="mug" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 9 L4 18 Q4 20 6 20 L14 20 Q16 20 16 18 L16 9 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4 9 L16 9 L16 11.5 L4 11.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" stroke="none" />
+  <circle cx="8.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <circle cx="11.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <path d="M16 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L16 17" />
+  <path d="M7 6 Q7 4 8 3" />
+  <path d="M10 6 Q10 4 11 3" />
+  <path d="M13 6 Q13 4 14 3" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="mug" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 9 L4 18 Q4 20 6 20 L14 20 Q16 20 16 18 L16 9 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4 9 L16 9 L16 11.5 L4 11.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" stroke="none" />
+  <circle cx="8.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <circle cx="11.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <path d="M16 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L16 17" />
+  <path d="M7 6 Q7 4 8 3" />
+  <path d="M10 6 Q10 4 11 3" />
+  <path d="M13 6 Q13 4 14 3" />
+</svg>
+<svg class="ic s24" data-id="mug" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 9 L4 18 Q4 20 6 20 L14 20 Q16 20 16 18 L16 9 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4 9 L16 9 L16 11.5 L4 11.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" stroke="none" />
+  <circle cx="8.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <circle cx="11.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <path d="M16 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L16 17" />
+  <path d="M7 6 Q7 4 8 3" />
+  <path d="M10 6 Q10 4 11 3" />
+  <path d="M13 6 Q13 4 14 3" />
+</svg>
+<svg class="ic s40" data-id="mug" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 9 L4 18 Q4 20 6 20 L14 20 Q16 20 16 18 L16 9 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4 9 L16 9 L16 11.5 L4 11.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.9" stroke="none" />
+  <circle cx="8.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <circle cx="11.5" cy="10.2" r="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" stroke="none" />
+  <path d="M16 11 L18 11 Q20 11 20 13 L20 15 Q20 17 18 17 L16 17" />
+  <path d="M7 6 Q7 4 8 3" />
+  <path d="M10 6 Q10 4 11 3" />
+  <path d="M13 6 Q13 4 14 3" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Mug</span><code>mug</code></div>
+    </div>
+    <div class="card" id="i-north-star">
+      <div class="cell"><svg class="ic " data-id="north-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12.7 11.3 L18 12 L12.7 12.7 L12 18 L11.3 12.7 L6 12 L11.3 11.3 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.6" stroke="none" />
+  <circle cx="19" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="19" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="north-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12.7 11.3 L18 12 L12.7 12.7 L12 18 L11.3 12.7 L6 12 L11.3 11.3 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.6" stroke="none" />
+  <circle cx="19" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="19" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="north-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12.7 11.3 L18 12 L12.7 12.7 L12 18 L11.3 12.7 L6 12 L11.3 11.3 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.6" stroke="none" />
+  <circle cx="19" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="19" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="north-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L13.5 10.5 L22 12 L13.5 13.5 L12 22 L10.5 13.5 L2 12 L10.5 10.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12.7 11.3 L18 12 L12.7 12.7 L12 18 L11.3 12.7 L6 12 L11.3 11.3 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.6" stroke="none" />
+  <circle cx="19" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="19" cy="19" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="5" cy="5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">North star</span><code>north-star</code></div>
+    </div>
+    <div class="card" id="i-nutcracker">
+      <div class="cell"><svg class="ic " data-id="nutcracker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 2 L16 2 L16 6 L8 6 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M9 6 L9 10 L15 10 L15 6 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M8 10 L16 10 L16 14 L15 14 L15 20 L9 20 L9 14 L8 14 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="9" y="13" width="6" height="1.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="11" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M9 20 L9 22" />
+  <path d="M15 20 L15 22" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="nutcracker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 2 L16 2 L16 6 L8 6 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M9 6 L9 10 L15 10 L15 6 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M8 10 L16 10 L16 14 L15 14 L15 20 L9 20 L9 14 L8 14 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="9" y="13" width="6" height="1.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="11" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M9 20 L9 22" />
+  <path d="M15 20 L15 22" />
+</svg>
+<svg class="ic s24" data-id="nutcracker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 2 L16 2 L16 6 L8 6 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M9 6 L9 10 L15 10 L15 6 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M8 10 L16 10 L16 14 L15 14 L15 20 L9 20 L9 14 L8 14 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="9" y="13" width="6" height="1.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="11" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M9 20 L9 22" />
+  <path d="M15 20 L15 22" />
+</svg>
+<svg class="ic s40" data-id="nutcracker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 2 L16 2 L16 6 L8 6 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M9 6 L9 10 L15 10 L15 6 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M8 10 L16 10 L16 14 L15 14 L15 20 L9 20 L9 14 L8 14 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="9" y="13" width="6" height="1.6" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="11" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="8" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M9 20 L9 22" />
+  <path d="M15 20 L15 22" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Nutcracker</span><code>nutcracker</code></div>
+    </div>
+    <div class="card" id="i-ornament">
+      <div class="cell"><svg class="ic " data-id="ornament" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-green, #3fae7a)" />
+  <path d="M6 14 Q12 11 18 14" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 18 Q12 16 16 18" stroke="var(--icon-gold, #f0b32e)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+  <path d="M11 3 L13 3" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="ornament" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-green, #3fae7a)" />
+  <path d="M6 14 Q12 11 18 14" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 18 Q12 16 16 18" stroke="var(--icon-gold, #f0b32e)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+  <path d="M11 3 L13 3" />
+</svg>
+<svg class="ic s24" data-id="ornament" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-green, #3fae7a)" />
+  <path d="M6 14 Q12 11 18 14" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 18 Q12 16 16 18" stroke="var(--icon-gold, #f0b32e)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+  <path d="M11 3 L13 3" />
+</svg>
+<svg class="ic s40" data-id="ornament" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="14" r="6" fill="var(--icon-green, #3fae7a)" />
+  <path d="M6 14 Q12 11 18 14" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M8 18 Q12 16 16 18" stroke="var(--icon-gold, #f0b32e)" />
+  <rect x="10" y="6" width="4" height="2.2" rx="0.5" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M12 6 L12 3" />
+  <path d="M11 3 L13 3" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Ornament</span><code>ornament</code></div>
+    </div>
+    <div class="card" id="i-peppermint">
+      <div class="cell"><svg class="ic " data-id="peppermint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M12 12 L12 3 A9 9 0 0 1 18.4 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L21 12 A9 9 0 0 1 18.4 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L12 21 A9 9 0 0 1 5.6 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L3 12 A9 9 0 0 1 5.6 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="12" r="9" fill="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="peppermint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M12 12 L12 3 A9 9 0 0 1 18.4 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L21 12 A9 9 0 0 1 18.4 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L12 21 A9 9 0 0 1 5.6 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L3 12 A9 9 0 0 1 5.6 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="12" r="9" fill="none" />
+</svg>
+<svg class="ic s24" data-id="peppermint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M12 12 L12 3 A9 9 0 0 1 18.4 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L21 12 A9 9 0 0 1 18.4 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L12 21 A9 9 0 0 1 5.6 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L3 12 A9 9 0 0 1 5.6 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="12" r="9" fill="none" />
+</svg>
+<svg class="ic s40" data-id="peppermint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M12 12 L12 3 A9 9 0 0 1 18.4 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L21 12 A9 9 0 0 1 18.4 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L12 21 A9 9 0 0 1 5.6 18.4 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 12 L3 12 A9 9 0 0 1 5.6 5.6 Z" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="12" r="9" fill="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Peppermint candy</span><code>peppermint</code></div>
+    </div>
+    <div class="card" id="i-phone">
+      <div class="cell"><svg class="ic " data-id="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 3 Q3 3 3 5 L3 7 Q3 9 5 9 L7 9 Q9 9 9 7 L9 6 Q9 5 8 5 L6 5 Q10 15 19 18 L19 16 Q19 15 20 15 L21 15 Q22 15 22 17 L22 19 Q22 21 20 21 Q7 21 3 8 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 3 Q3 3 3 5 L3 7 Q3 9 5 9 L7 9 Q9 9 9 7 L9 6 Q9 5 8 5 L6 5 Q10 15 19 18 L19 16 Q19 15 20 15 L21 15 Q22 15 22 17 L22 19 Q22 21 20 21 Q7 21 3 8 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+<svg class="ic s24" data-id="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 3 Q3 3 3 5 L3 7 Q3 9 5 9 L7 9 Q9 9 9 7 L9 6 Q9 5 8 5 L6 5 Q10 15 19 18 L19 16 Q19 15 20 15 L21 15 Q22 15 22 17 L22 19 Q22 21 20 21 Q7 21 3 8 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+<svg class="ic s40" data-id="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 3 Q3 3 3 5 L3 7 Q3 9 5 9 L7 9 Q9 9 9 7 L9 6 Q9 5 8 5 L6 5 Q10 15 19 18 L19 16 Q19 15 20 15 L21 15 Q22 15 22 17 L22 19 Q22 21 20 21 Q7 21 3 8 Z" fill="currentColor" fill-opacity="0.2" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Phone</span><code>phone</code></div>
+    </div>
+    <div class="card" id="i-pine-branch">
+      <div class="cell"><svg class="ic " data-id="pine-branch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 L20 20" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M6 5 L4 9" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L5 10" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 9 L6 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 10 L7 14" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 13 L9 17" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 14 L10 18" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 17 L12 21" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 18 L14 22" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M20 20 L21 16" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 15 L21 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 12 L18 8" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 9 L15 5" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L11 3" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="pine-branch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 L20 20" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M6 5 L4 9" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L5 10" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 9 L6 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 10 L7 14" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 13 L9 17" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 14 L10 18" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 17 L12 21" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 18 L14 22" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M20 20 L21 16" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 15 L21 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 12 L18 8" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 9 L15 5" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L11 3" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+<svg class="ic s24" data-id="pine-branch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 L20 20" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M6 5 L4 9" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L5 10" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 9 L6 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 10 L7 14" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 13 L9 17" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 14 L10 18" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 17 L12 21" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 18 L14 22" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M20 20 L21 16" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 15 L21 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 12 L18 8" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 9 L15 5" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L11 3" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+<svg class="ic s40" data-id="pine-branch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 L20 20" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M6 5 L4 9" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L5 10" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 9 L6 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 10 L7 14" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 13 L9 17" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 14 L10 18" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 17 L12 21" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 18 L14 22" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M20 20 L21 16" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M18 15 L21 13" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M15 12 L18 8" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 9 L15 5" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M9 6 L11 3" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Pine branch</span><code>pine-branch</code></div>
+    </div>
+    <div class="card" id="i-pinecone">
+      <div class="cell"><svg class="ic " data-id="pinecone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 Q7 5 7 12 Q7 19 12 21 Q17 19 17 12 Q17 5 12 3 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M9 7 L12 9 L15 7" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 10 L12 12 L16 10" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 14 L12 16 L16 14" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M9 18 L12 20 L15 18" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M12 3 L11 1" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 3 L13 1" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="pinecone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 Q7 5 7 12 Q7 19 12 21 Q17 19 17 12 Q17 5 12 3 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M9 7 L12 9 L15 7" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 10 L12 12 L16 10" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 14 L12 16 L16 14" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M9 18 L12 20 L15 18" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M12 3 L11 1" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 3 L13 1" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+<svg class="ic s24" data-id="pinecone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 Q7 5 7 12 Q7 19 12 21 Q17 19 17 12 Q17 5 12 3 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M9 7 L12 9 L15 7" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 10 L12 12 L16 10" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 14 L12 16 L16 14" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M9 18 L12 20 L15 18" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M12 3 L11 1" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 3 L13 1" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+<svg class="ic s40" data-id="pinecone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 Q7 5 7 12 Q7 19 12 21 Q17 19 17 12 Q17 5 12 3 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M9 7 L12 9 L15 7" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 10 L12 12 L16 10" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M8 14 L12 16 L16 14" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M9 18 L12 20 L15 18" stroke="var(--icon-snow, #ffffff)" stroke-opacity="0.8" />
+  <path d="M12 3 L11 1" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 3 L13 1" stroke="var(--icon-green, #3fae7a)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Pinecone</span><code>pinecone</code></div>
+    </div>
+    <div class="card" id="i-reindeer">
+      <div class="cell"><svg class="ic " data-id="reindeer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L5 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L8 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L19 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L16 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M9 8 Q7 12 9 16 L15 16 Q17 12 15 8 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="10" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.5" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 20 L11 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M13 20 L13 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="reindeer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L5 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L8 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L19 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L16 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M9 8 Q7 12 9 16 L15 16 Q17 12 15 8 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="10" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.5" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 20 L11 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M13 20 L13 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+</svg>
+<svg class="ic s24" data-id="reindeer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L5 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L8 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L19 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L16 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M9 8 Q7 12 9 16 L15 16 Q17 12 15 8 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="10" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.5" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 20 L11 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M13 20 L13 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+</svg>
+<svg class="ic s40" data-id="reindeer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L5 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M7 4 L8 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L19 6" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 4 L16 2" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M9 8 Q7 12 9 16 L15 16 Q17 12 15 8 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="10" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="11" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.5" r="1.3" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 20 L11 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M13 20 L13 17" stroke="var(--icon-cocoa, #9a5b2f)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Reindeer</span><code>reindeer</code></div>
+    </div>
+    <div class="card" id="i-reindeer-face">
+      <div class="cell"><svg class="ic " data-id="reindeer-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 6 Q4 3 3 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q6 3 8 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q9 5 9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q20 3 21 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q18 3 16 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q15 5 15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <ellipse cx="12" cy="14" rx="6" ry="5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="9.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="14.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="1.5" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="reindeer-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 6 Q4 3 3 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q6 3 8 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q9 5 9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q20 3 21 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q18 3 16 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q15 5 15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <ellipse cx="12" cy="14" rx="6" ry="5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="9.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="14.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="1.5" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="reindeer-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 6 Q4 3 3 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q6 3 8 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q9 5 9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q20 3 21 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q18 3 16 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q15 5 15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <ellipse cx="12" cy="14" rx="6" ry="5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="9.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="14.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="1.5" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="reindeer-face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 6 Q4 3 3 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q6 3 8 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M6 6 Q9 5 9 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q20 3 21 5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q18 3 16 3" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18 6 Q15 5 15 8" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <ellipse cx="12" cy="14" rx="6" ry="5" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.8" />
+  <circle cx="9.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="14.5" cy="13" r="0.7" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="1.5" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Reindeer face</span><code>reindeer-face</code></div>
+    </div>
+    <div class="card" id="i-ribbon">
+      <div class="cell"><svg class="ic " data-id="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 3 L16 3 L16 15 L12 12 L8 15 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 6.2 L16 6.2" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 3 L16 3 L16 15 L12 12 L8 15 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 6.2 L16 6.2" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+<svg class="ic s24" data-id="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 3 L16 3 L16 15 L12 12 L8 15 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 6.2 L16 6.2" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+<svg class="ic s40" data-id="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 3 L16 3 L16 15 L12 12 L8 15 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 6.2 L16 6.2" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Ribbon</span><code>ribbon</code></div>
+    </div>
+    <div class="card" id="i-santa">
+      <div class="cell"><svg class="ic " data-id="santa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 Q12 2 18 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke-opacity="0.35" />
+  <circle cx="12" cy="2.7" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M7 13.5 Q12 22 17 13.5 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="10" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.6" r="1" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="santa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 Q12 2 18 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke-opacity="0.35" />
+  <circle cx="12" cy="2.7" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M7 13.5 Q12 22 17 13.5 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="10" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.6" r="1" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="santa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 Q12 2 18 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke-opacity="0.35" />
+  <circle cx="12" cy="2.7" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M7 13.5 Q12 22 17 13.5 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="10" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.6" r="1" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="santa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 11 Q12 2 18 11 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M4.5 11 L19.5 11" stroke-width="2.6" stroke-opacity="0.35" />
+  <circle cx="12" cy="2.7" r="1.4" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+  <path d="M7 13.5 Q12 22 17 13.5 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="10" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="14" cy="12.6" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="14.6" r="1" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Santa</span><code>santa</code></div>
+    </div>
+    <div class="card" id="i-santa-hat">
+      <div class="cell"><svg class="ic " data-id="santa-hat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 15 Q10 5 20.5 5 Q12 7 18 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="4" y="14.5" width="16" height="3.5" rx="1.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="20.5" cy="5" r="1.7" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="santa-hat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 15 Q10 5 20.5 5 Q12 7 18 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="4" y="14.5" width="16" height="3.5" rx="1.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="20.5" cy="5" r="1.7" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+<svg class="ic s24" data-id="santa-hat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 15 Q10 5 20.5 5 Q12 7 18 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="4" y="14.5" width="16" height="3.5" rx="1.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="20.5" cy="5" r="1.7" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+<svg class="ic s40" data-id="santa-hat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 15 Q10 5 20.5 5 Q12 7 18 15 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="4" y="14.5" width="16" height="3.5" rx="1.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="20.5" cy="5" r="1.7" fill="var(--icon-snow, #ffffff)" fill-opacity="0.95" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Santa hat</span><code>santa-hat</code></div>
+    </div>
+    <div class="card" id="i-scarf">
+      <div class="cell"><svg class="ic " data-id="scarf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 15 L10 15 L10 21 L13 21 L13 15 L18 15 L18 4 Q12 8 6 4 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 8.5 L18 8.5" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M10 18 L13 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="scarf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 15 L10 15 L10 21 L13 21 L13 15 L18 15 L18 4 Q12 8 6 4 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 8.5 L18 8.5" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M10 18 L13 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+<svg class="ic s24" data-id="scarf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 15 L10 15 L10 21 L13 21 L13 15 L18 15 L18 4 Q12 8 6 4 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 8.5 L18 8.5" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M10 18 L13 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+<svg class="ic s40" data-id="scarf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 15 L10 15 L10 21 L13 21 L13 15 L18 15 L18 4 Q12 8 6 4 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 8.5 L18 8.5" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M10 18 L13 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Scarf</span><code>scarf</code></div>
+    </div>
+    <div class="card" id="i-skate">
+      <div class="cell"><svg class="ic " data-id="skate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 12 Q6 14 8 14 L18 14 Q20 14 20 12 Q20 10 18 10 L14 10 L14 4 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 8 L14 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M4 17.5 L21 17.5" stroke-width="1.8" />
+  <path d="M6 14 L6 17.5" />
+  <path d="M20 14 L20 17.5" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="skate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 12 Q6 14 8 14 L18 14 Q20 14 20 12 Q20 10 18 10 L14 10 L14 4 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 8 L14 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M4 17.5 L21 17.5" stroke-width="1.8" />
+  <path d="M6 14 L6 17.5" />
+  <path d="M20 14 L20 17.5" />
+</svg>
+<svg class="ic s24" data-id="skate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 12 Q6 14 8 14 L18 14 Q20 14 20 12 Q20 10 18 10 L14 10 L14 4 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 8 L14 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M4 17.5 L21 17.5" stroke-width="1.8" />
+  <path d="M6 14 L6 17.5" />
+  <path d="M20 14 L20 17.5" />
+</svg>
+<svg class="ic s40" data-id="skate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 L6 12 Q6 14 8 14 L18 14 Q20 14 20 12 Q20 10 18 10 L14 10 L14 4 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 8 L14 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M4 17.5 L21 17.5" stroke-width="1.8" />
+  <path d="M6 14 L6 17.5" />
+  <path d="M20 14 L20 17.5" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Ice skate</span><code>skate</code></div>
+    </div>
+    <div class="card" id="i-skis">
+      <div class="cell"><svg class="ic " data-id="skis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 20 Q4 5 9 3 L11 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M13 20 Q13 6 18 4 L20 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 12 L11 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M14 12 L20 11" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="skis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 20 Q4 5 9 3 L11 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M13 20 Q13 6 18 4 L20 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 12 L11 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M14 12 L20 11" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+<svg class="ic s24" data-id="skis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 20 Q4 5 9 3 L11 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M13 20 Q13 6 18 4 L20 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 12 L11 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M14 12 L20 11" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+<svg class="ic s40" data-id="skis" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M5 20 Q4 5 9 3 L11 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M13 20 Q13 6 18 4 L20 20 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M6 12 L11 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M14 12 L20 11" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Skis</span><code>skis</code></div>
+    </div>
+    <div class="card" id="i-sled">
+      <div class="cell"><svg class="ic " data-id="sled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 10 L21 6 L21 8.5 L3 12.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M5 12 L5 15" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M11 10.6 L11 14" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 9.4 L17 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M4 17 L20 13" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M4 17 Q3 19 4 20 L20 16 Q21 15 20 14" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="sled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 10 L21 6 L21 8.5 L3 12.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M5 12 L5 15" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M11 10.6 L11 14" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 9.4 L17 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M4 17 L20 13" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M4 17 Q3 19 4 20 L20 16 Q21 15 20 14" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+</svg>
+<svg class="ic s24" data-id="sled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 10 L21 6 L21 8.5 L3 12.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M5 12 L5 15" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M11 10.6 L11 14" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 9.4 L17 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M4 17 L20 13" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M4 17 Q3 19 4 20 L20 16 Q21 15 20 14" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+</svg>
+<svg class="ic s40" data-id="sled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 10 L21 6 L21 8.5 L3 12.5 Z" fill="var(--icon-cocoa, #9a5b2f)" fill-opacity="0.85" />
+  <path d="M5 12 L5 15" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M11 10.6 L11 14" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M17 9.4 L17 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M4 17 L20 13" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M4 17 Q3 19 4 20 L20 16 Q21 15 20 14" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Sled</span><code>sled</code></div>
+    </div>
+    <div class="card" id="i-sleigh">
+      <div class="cell"><svg class="ic " data-id="sleigh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 14 Q4 10 8 10 L18 10 Q20 10 20 12 L20 15 L6 15 Q4 15 4 14 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 10 Q8 6 12 6" stroke="var(--icon-red, #e0524b)" />
+  <path d="M3 18 L21 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M5 15 L5 17.5" />
+  <path d="M19 15 L19 17.5" />
+  <path d="M4 18 Q3 20 5 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M20 18 Q21 20 19 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="sleigh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 14 Q4 10 8 10 L18 10 Q20 10 20 12 L20 15 L6 15 Q4 15 4 14 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 10 Q8 6 12 6" stroke="var(--icon-red, #e0524b)" />
+  <path d="M3 18 L21 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M5 15 L5 17.5" />
+  <path d="M19 15 L19 17.5" />
+  <path d="M4 18 Q3 20 5 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M20 18 Q21 20 19 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+<svg class="ic s24" data-id="sleigh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 14 Q4 10 8 10 L18 10 Q20 10 20 12 L20 15 L6 15 Q4 15 4 14 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 10 Q8 6 12 6" stroke="var(--icon-red, #e0524b)" />
+  <path d="M3 18 L21 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M5 15 L5 17.5" />
+  <path d="M19 15 L19 17.5" />
+  <path d="M4 18 Q3 20 5 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M20 18 Q21 20 19 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+<svg class="ic s40" data-id="sleigh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 14 Q4 10 8 10 L18 10 Q20 10 20 12 L20 15 L6 15 Q4 15 4 14 Z" fill="var(--icon-red, #e0524b)" />
+  <path d="M8 10 Q8 6 12 6" stroke="var(--icon-red, #e0524b)" />
+  <path d="M3 18 L21 18" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M5 15 L5 17.5" />
+  <path d="M19 15 L19 17.5" />
+  <path d="M4 18 Q3 20 5 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M20 18 Q21 20 19 20" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Sleigh</span><code>sleigh</code></div>
+    </div>
+    <div class="card" id="i-snow-cloud">
+      <div class="cell"><svg class="ic " data-id="snow-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 13 Q2 13 2 9 Q2 5 6 5 Q7 2 11 2 Q15 2 16 5 Q21 5 21 9 Q21 13 17 13 Z" fill="currentColor" fill-opacity="0.2" />
+  <path d="M7 17 L7 22" />
+  <path d="M5 19 L9 19" />
+  <path d="M12 15 L12 22" />
+  <path d="M9.5 17 L14.5 17" />
+  <path d="M9.5 20 L14.5 20" />
+  <path d="M17 17 L17 22" />
+  <path d="M15 19 L19 19" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="snow-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 13 Q2 13 2 9 Q2 5 6 5 Q7 2 11 2 Q15 2 16 5 Q21 5 21 9 Q21 13 17 13 Z" fill="currentColor" fill-opacity="0.2" />
+  <path d="M7 17 L7 22" />
+  <path d="M5 19 L9 19" />
+  <path d="M12 15 L12 22" />
+  <path d="M9.5 17 L14.5 17" />
+  <path d="M9.5 20 L14.5 20" />
+  <path d="M17 17 L17 22" />
+  <path d="M15 19 L19 19" />
+</svg>
+<svg class="ic s24" data-id="snow-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 13 Q2 13 2 9 Q2 5 6 5 Q7 2 11 2 Q15 2 16 5 Q21 5 21 9 Q21 13 17 13 Z" fill="currentColor" fill-opacity="0.2" />
+  <path d="M7 17 L7 22" />
+  <path d="M5 19 L9 19" />
+  <path d="M12 15 L12 22" />
+  <path d="M9.5 17 L14.5 17" />
+  <path d="M9.5 20 L14.5 20" />
+  <path d="M17 17 L17 22" />
+  <path d="M15 19 L19 19" />
+</svg>
+<svg class="ic s40" data-id="snow-cloud" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 13 Q2 13 2 9 Q2 5 6 5 Q7 2 11 2 Q15 2 16 5 Q21 5 21 9 Q21 13 17 13 Z" fill="currentColor" fill-opacity="0.2" />
+  <path d="M7 17 L7 22" />
+  <path d="M5 19 L9 19" />
+  <path d="M12 15 L12 22" />
+  <path d="M9.5 17 L14.5 17" />
+  <path d="M9.5 20 L14.5 20" />
+  <path d="M17 17 L17 22" />
+  <path d="M15 19 L19 19" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Snow cloud</span><code>snow-cloud</code></div>
+    </div>
+    <div class="card" id="i-snowboard">
+      <div class="cell"><svg class="ic " data-id="snowboard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 Q10 3 12 12 Q14 21 20 20 Q19 15 12 12 Q5 9 4 4 Z" fill="var(--icon-green, #3fae7a)" />
+  <path d="M10 9 L14 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M12 14 L16 16" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="snowboard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 Q10 3 12 12 Q14 21 20 20 Q19 15 12 12 Q5 9 4 4 Z" fill="var(--icon-green, #3fae7a)" />
+  <path d="M10 9 L14 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M12 14 L16 16" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+<svg class="ic s24" data-id="snowboard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 Q10 3 12 12 Q14 21 20 20 Q19 15 12 12 Q5 9 4 4 Z" fill="var(--icon-green, #3fae7a)" />
+  <path d="M10 9 L14 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M12 14 L16 16" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+<svg class="ic s40" data-id="snowboard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4 Q10 3 12 12 Q14 21 20 20 Q19 15 12 12 Q5 9 4 4 Z" fill="var(--icon-green, #3fae7a)" />
+  <path d="M10 9 L14 11" stroke="var(--icon-snow, #ffffff)" />
+  <path d="M12 14 L16 16" stroke="var(--icon-snow, #ffffff)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Snowboard</span><code>snowboard</code></div>
+    </div>
+    <div class="card" id="i-snowflake">
+      <div class="cell"><svg class="ic " data-id="snowflake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L12 22" />
+  <path d="M3.5 7 L20.5 17" />
+  <path d="M3.5 17 L20.5 7" />
+  <path d="M12 6 L10 4" />
+  <path d="M12 6 L14 4" />
+  <path d="M12 18 L10 20" />
+  <path d="M12 18 L14 20" />
+  <path d="M6 8 L4 7.5" />
+  <path d="M6 8 L6 5.5" />
+  <path d="M18 16 L20 16.5" />
+  <path d="M18 16 L18 18.5" />
+  <path d="M6 16 L4 16.5" />
+  <path d="M6 16 L6 18.5" />
+  <path d="M18 8 L20 7.5" />
+  <path d="M18 8 L18 5.5" />
+  <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="snowflake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L12 22" />
+  <path d="M3.5 7 L20.5 17" />
+  <path d="M3.5 17 L20.5 7" />
+  <path d="M12 6 L10 4" />
+  <path d="M12 6 L14 4" />
+  <path d="M12 18 L10 20" />
+  <path d="M12 18 L14 20" />
+  <path d="M6 8 L4 7.5" />
+  <path d="M6 8 L6 5.5" />
+  <path d="M18 16 L20 16.5" />
+  <path d="M18 16 L18 18.5" />
+  <path d="M6 16 L4 16.5" />
+  <path d="M6 16 L6 18.5" />
+  <path d="M18 8 L20 7.5" />
+  <path d="M18 8 L18 5.5" />
+  <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="snowflake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L12 22" />
+  <path d="M3.5 7 L20.5 17" />
+  <path d="M3.5 17 L20.5 7" />
+  <path d="M12 6 L10 4" />
+  <path d="M12 6 L14 4" />
+  <path d="M12 18 L10 20" />
+  <path d="M12 18 L14 20" />
+  <path d="M6 8 L4 7.5" />
+  <path d="M6 8 L6 5.5" />
+  <path d="M18 16 L20 16.5" />
+  <path d="M18 16 L18 18.5" />
+  <path d="M6 16 L4 16.5" />
+  <path d="M6 16 L6 18.5" />
+  <path d="M18 8 L20 7.5" />
+  <path d="M18 8 L18 5.5" />
+  <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="snowflake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 2 L12 22" />
+  <path d="M3.5 7 L20.5 17" />
+  <path d="M3.5 17 L20.5 7" />
+  <path d="M12 6 L10 4" />
+  <path d="M12 6 L14 4" />
+  <path d="M12 18 L10 20" />
+  <path d="M12 18 L14 20" />
+  <path d="M6 8 L4 7.5" />
+  <path d="M6 8 L6 5.5" />
+  <path d="M18 16 L20 16.5" />
+  <path d="M18 16 L18 18.5" />
+  <path d="M6 16 L4 16.5" />
+  <path d="M6 16 L6 18.5" />
+  <path d="M18 8 L20 7.5" />
+  <path d="M18 8 L18 5.5" />
+  <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Snowflake</span><code>snowflake</code></div>
+    </div>
+    <div class="card" id="i-snowglobe">
+      <div class="cell"><svg class="ic " data-id="snowglobe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="11" r="7" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 8 L9.5 12.5 L14.5 12.5 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 12.5 L12 14.5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M5 18 L19 18 L18 21 L6 21 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="8" cy="8" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="15" cy="7" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="8.5" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="16" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="snowglobe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="11" r="7" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 8 L9.5 12.5 L14.5 12.5 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 12.5 L12 14.5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M5 18 L19 18 L18 21 L6 21 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="8" cy="8" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="15" cy="7" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="8.5" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="16" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="snowglobe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="11" r="7" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 8 L9.5 12.5 L14.5 12.5 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 12.5 L12 14.5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M5 18 L19 18 L18 21 L6 21 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="8" cy="8" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="15" cy="7" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="8.5" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="16" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="snowglobe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="11" r="7" fill="currentColor" fill-opacity="0.14" />
+  <path d="M12 8 L9.5 12.5 L14.5 12.5 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M12 12.5 L12 14.5" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M5 18 L19 18 L18 21 L6 21 Z" fill="var(--icon-red, #e0524b)" />
+  <circle cx="8" cy="8" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="15" cy="7" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="8.5" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+  <circle cx="16" cy="13.5" r="0.6" fill="var(--icon-snow, #ffffff)" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Snow globe</span><code>snowglobe</code></div>
+    </div>
+    <div class="card" id="i-snowman">
+      <div class="cell"><svg class="ic " data-id="snowman" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="15" r="5.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="7" r="3.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 4 L18 4" />
+  <path d="M8 4 L8 2.5 L16 2.5 L16 4 Z" fill="currentColor" fill-opacity="0.6" />
+  <circle cx="11" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M12 8 L14.5 9" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M8 10 Q12 12.5 16 10" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M5.5 14 L1 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18.5 14 L23 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <circle cx="12" cy="13.5" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="snowman" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="15" r="5.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="7" r="3.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 4 L18 4" />
+  <path d="M8 4 L8 2.5 L16 2.5 L16 4 Z" fill="currentColor" fill-opacity="0.6" />
+  <circle cx="11" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M12 8 L14.5 9" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M8 10 Q12 12.5 16 10" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M5.5 14 L1 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18.5 14 L23 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <circle cx="12" cy="13.5" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="snowman" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="15" r="5.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="7" r="3.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 4 L18 4" />
+  <path d="M8 4 L8 2.5 L16 2.5 L16 4 Z" fill="currentColor" fill-opacity="0.6" />
+  <circle cx="11" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M12 8 L14.5 9" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M8 10 Q12 12.5 16 10" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M5.5 14 L1 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18.5 14 L23 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <circle cx="12" cy="13.5" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="snowman" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="15" r="5.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <circle cx="12" cy="7" r="3.5" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M6 4 L18 4" />
+  <path d="M8 4 L8 2.5 L16 2.5 L16 4 Z" fill="currentColor" fill-opacity="0.6" />
+  <circle cx="11" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <circle cx="13" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+  <path d="M12 8 L14.5 9" stroke="var(--icon-gold, #f0b32e)" stroke-width="1.8" />
+  <path d="M8 10 Q12 12.5 16 10" stroke="var(--icon-red, #e0524b)" stroke-width="1.8" />
+  <path d="M5.5 14 L1 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <path d="M18.5 14 L23 12" stroke="var(--icon-cocoa, #9a5b2f)" />
+  <circle cx="12" cy="13.5" r="0.6" fill="currentColor" stroke="none" />
+  <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Snowman</span><code>snowman</code></div>
+    </div>
+    <div class="card" id="i-sparkles">
+      <div class="cell"><svg class="ic " data-id="sparkles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L13 8 L18 9 L13 10 L12 15 L11 10 L6 9 L11 8 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M18 13 L18.7 16.3 L22 17 L18.7 17.7 L18 21 L17.3 17.7 L14 17 L17.3 16.3 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M5 15 L5.5 17.5 L8 18 L5.5 18.5 L5 21 L4.5 18.5 L2 18 L4.5 17.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="sparkles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L13 8 L18 9 L13 10 L12 15 L11 10 L6 9 L11 8 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M18 13 L18.7 16.3 L22 17 L18.7 17.7 L18 21 L17.3 17.7 L14 17 L17.3 16.3 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M5 15 L5.5 17.5 L8 18 L5.5 18.5 L5 21 L4.5 18.5 L2 18 L4.5 17.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s24" data-id="sparkles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L13 8 L18 9 L13 10 L12 15 L11 10 L6 9 L11 8 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M18 13 L18.7 16.3 L22 17 L18.7 17.7 L18 21 L17.3 17.7 L14 17 L17.3 16.3 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M5 15 L5.5 17.5 L8 18 L5.5 18.5 L5 21 L4.5 18.5 L2 18 L4.5 17.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s40" data-id="sparkles" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L13 8 L18 9 L13 10 L12 15 L11 10 L6 9 L11 8 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M18 13 L18.7 16.3 L22 17 L18.7 17.7 L18 21 L17.3 17.7 L14 17 L17.3 16.3 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+  <path d="M5 15 L5.5 17.5 L8 18 L5.5 18.5 L5 21 L4.5 18.5 L2 18 L4.5 17.5 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Sparkles</span><code>sparkles</code></div>
+    </div>
+    <div class="card" id="i-star">
+      <div class="cell"><svg class="ic " data-id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L14.6 9.4 L21.5 10 L16.3 14.6 L17.9 21.4 L12 17.7 L6.1 21.4 L7.7 14.6 L2.5 10 L9.4 9.4 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L14.6 9.4 L21.5 10 L16.3 14.6 L17.9 21.4 L12 17.7 L6.1 21.4 L7.7 14.6 L2.5 10 L9.4 9.4 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s24" data-id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L14.6 9.4 L21.5 10 L16.3 14.6 L17.9 21.4 L12 17.7 L6.1 21.4 L7.7 14.6 L2.5 10 L9.4 9.4 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+<svg class="ic s40" data-id="star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L14.6 9.4 L21.5 10 L16.3 14.6 L17.9 21.4 L12 17.7 L6.1 21.4 L7.7 14.6 L2.5 10 L9.4 9.4 Z" fill="var(--icon-gold, #f0b32e)" stroke="var(--icon-gold, #f0b32e)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Star</span><code>star</code></div>
+    </div>
+    <div class="card" id="i-stocking">
+      <div class="cell"><svg class="ic " data-id="stocking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="6" y="3.2" width="10" height="4.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L11 19 L11 15 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" stroke="none" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 L7 4 Z" fill="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="stocking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="6" y="3.2" width="10" height="4.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L11 19 L11 15 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" stroke="none" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 L7 4 Z" fill="none" />
+</svg>
+<svg class="ic s24" data-id="stocking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="6" y="3.2" width="10" height="4.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L11 19 L11 15 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" stroke="none" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 L7 4 Z" fill="none" />
+</svg>
+<svg class="ic s40" data-id="stocking" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M7 4 L7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 Z" fill="var(--icon-red, #e0524b)" />
+  <rect x="6" y="3.2" width="10" height="4.6" rx="1" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L11 19 L11 15 Z" fill="var(--icon-snow, #ffffff)" fill-opacity="0.92" stroke="none" />
+  <path d="M7 15 Q5 15 5 17 Q5 19 7 19 L14 19 Q17 19 17 17 Q17 15 15 15 L15 4 L7 4 Z" fill="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Stocking</span><code>stocking</code></div>
+    </div>
+    <div class="card" id="i-tree">
+      <div class="cell"><svg class="ic " data-id="tree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L7 10 L9.5 10 L6 15 L9 15 L4.5 20 L19.5 20 L15 15 L18 15 L14.5 10 L17 10 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M10.5 20 L10.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M13.5 20 L13.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 0.8 L12.9 2.8 L15 3 L13.4 4.3 L13.9 6.3 L12 5.2 L10.1 6.3 L10.6 4.3 L9 3 L11.1 2.8 Z" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="10" cy="13" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="14" cy="17" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="13" cy="9.5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="8.5" cy="18" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="tree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L7 10 L9.5 10 L6 15 L9 15 L4.5 20 L19.5 20 L15 15 L18 15 L14.5 10 L17 10 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M10.5 20 L10.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M13.5 20 L13.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 0.8 L12.9 2.8 L15 3 L13.4 4.3 L13.9 6.3 L12 5.2 L10.1 6.3 L10.6 4.3 L9 3 L11.1 2.8 Z" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="10" cy="13" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="14" cy="17" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="13" cy="9.5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="8.5" cy="18" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+<svg class="ic s24" data-id="tree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L7 10 L9.5 10 L6 15 L9 15 L4.5 20 L19.5 20 L15 15 L18 15 L14.5 10 L17 10 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M10.5 20 L10.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M13.5 20 L13.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 0.8 L12.9 2.8 L15 3 L13.4 4.3 L13.9 6.3 L12 5.2 L10.1 6.3 L10.6 4.3 L9 3 L11.1 2.8 Z" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="10" cy="13" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="14" cy="17" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="13" cy="9.5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="8.5" cy="18" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+<svg class="ic s40" data-id="tree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3 L7 10 L9.5 10 L6 15 L9 15 L4.5 20 L19.5 20 L15 15 L18 15 L14.5 10 L17 10 Z" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <path d="M10.5 20 L10.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M13.5 20 L13.5 22.5" stroke="var(--icon-cocoa, #9a5b2f)" stroke-width="1.8" />
+  <path d="M12 0.8 L12.9 2.8 L15 3 L13.4 4.3 L13.9 6.3 L12 5.2 L10.1 6.3 L10.6 4.3 L9 3 L11.1 2.8 Z" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="10" cy="13" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="14" cy="17" r="0.9" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="13" cy="9.5" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+  <circle cx="8.5" cy="18" r="0.8" fill="var(--icon-gold, #f0b32e)" stroke="none" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Christmas tree</span><code>tree</code></div>
+    </div>
+    <div class="card" id="i-wreath">
+      <div class="cell"><svg class="ic " data-id="wreath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 6 A7 7 0 1 0 12 20 A7 7 0 1 0 12 6 Z M12 9 A4 4 0 1 1 12 17 A4 4 0 1 1 12 9 Z" fill-rule="evenodd" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="8" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="16" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="6.2" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="17.8" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="19.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 4.5 Q8.5 1.5 8.5 4 Q8.5 6 12 4.5 Q15.5 1.5 15.5 4 Q15.5 6 12 4.5 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 5 L10 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M13 5 L14 8" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="sizes"><svg class="ic s16" data-id="wreath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 6 A7 7 0 1 0 12 20 A7 7 0 1 0 12 6 Z M12 9 A4 4 0 1 1 12 17 A4 4 0 1 1 12 9 Z" fill-rule="evenodd" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="8" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="16" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="6.2" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="17.8" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="19.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 4.5 Q8.5 1.5 8.5 4 Q8.5 6 12 4.5 Q15.5 1.5 15.5 4 Q15.5 6 12 4.5 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 5 L10 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M13 5 L14 8" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s24" data-id="wreath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 6 A7 7 0 1 0 12 20 A7 7 0 1 0 12 6 Z M12 9 A4 4 0 1 1 12 17 A4 4 0 1 1 12 9 Z" fill-rule="evenodd" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="8" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="16" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="6.2" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="17.8" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="19.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 4.5 Q8.5 1.5 8.5 4 Q8.5 6 12 4.5 Q15.5 1.5 15.5 4 Q15.5 6 12 4.5 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 5 L10 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M13 5 L14 8" stroke="var(--icon-red, #e0524b)" />
+</svg>
+<svg class="ic s40" data-id="wreath" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 6 A7 7 0 1 0 12 20 A7 7 0 1 0 12 6 Z M12 9 A4 4 0 1 1 12 17 A4 4 0 1 1 12 9 Z" fill-rule="evenodd" fill="var(--icon-green, #3fae7a)" stroke="var(--icon-green, #3fae7a)" />
+  <circle cx="8" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="16" cy="8.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="6.2" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="17.8" cy="15" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <circle cx="12" cy="19.5" r="1" fill="var(--icon-red, #e0524b)" stroke="none" />
+  <path d="M12 4.5 Q8.5 1.5 8.5 4 Q8.5 6 12 4.5 Q15.5 1.5 15.5 4 Q15.5 6 12 4.5 Z" fill="var(--icon-red, #e0524b)" stroke="var(--icon-red, #e0524b)" />
+  <path d="M11 5 L10 8" stroke="var(--icon-red, #e0524b)" />
+  <path d="M13 5 L14 8" stroke="var(--icon-red, #e0524b)" />
+</svg>
+</div>
+      <div class="meta"><span class="name">Wreath</span><code>wreath</code></div>
+    </div>
+  </div>
+</div>
+<script>
+  const root = document.documentElement, body = document.body;
+  const theme = document.getElementById("theme");
+  function setTheme(dark) { root.dataset.theme = dark ? "dark" : "light"; theme.setAttribute("aria-pressed", String(dark)); theme.textContent = dark ? "Light" : "Dark"; try { localStorage.setItem("iconpack-theme", dark ? "dark" : "light"); } catch {} }
+  let dark = false; try { dark = localStorage.getItem("iconpack-theme") === "dark"; } catch {} setTheme(dark);
+  theme.addEventListener("click", () => setTheme(root.dataset.theme !== "dark"));
+  document.getElementById("color").addEventListener("change", (e) => { body.dataset.color = e.target.value; });
+  document.getElementById("q").addEventListener("input", (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    for (const c of document.querySelectorAll(".card")) c.classList.toggle("hidden", q !== "" && !c.textContent.toLowerCase().includes(q));
+  });
+</script>
+</body>
+</html>
