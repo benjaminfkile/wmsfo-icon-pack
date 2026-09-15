@@ -1,6 +1,6 @@
 # WMSFO Icon Pack
 
-60 two-tone SVG icons for the Where's My Santa Fly Over site and admin panel. Christmas, winter, and a handful of utility and brand icons, all drawn on the same rule so they sit together at any size.
+60 two-tone SVG icons for the Western Montana Santa Flyover site and admin panel. Christmas, winter, and a handful of utility and brand icons, all drawn on the same rule so they sit together at any size.
 
 Open `index.html` in a browser to see the whole set in light and dark, at 16, 24, 40, and 48 px, and in a sample page layout. The sheet has a name filter and a colour mode switch.
 
